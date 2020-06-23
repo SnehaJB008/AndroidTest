@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.UserProfileFragment"
+    android:padding="@dimen/activity_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="@dimen/toolbar_profile_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivUserProfilePic"
+                android:layout_width="@dimen/toolbar_profile_width"
+                android:layout_height="@dimen/toolbar_profile_width"
+                android:layout_marginVertical="36dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_defaut_photo"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="1" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/btnChangePhoto"
+                android:layout_width="@dimen/ic_plus_width"
+                android:layout_height="@dimen/ic_plus_width"
+                android:layout_alignBottom="@id/ivUserProfilePic"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/btn_add"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/rlProfile"
+            android:layout_marginTop="36dp"/>
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:text="sneha@gmail.com"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email"
+            />
+
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
